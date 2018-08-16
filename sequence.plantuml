@@ -1,0 +1,20 @@
+@startuml
+
+skinparam sequence {
+         LifeLineBorderColor Black
+         BorderColor Navy
+         ParticipantBorderColor Navy
+         ArrowColor Black
+         ParticipantBackgroundColor WhiteSmoke
+         ParticipantPadding 50
+}
+skinparam style strictuml
+skinparam sequenceArrowThickness 2
+skinparam sequenceParticipant underline
+
+title Sequence diagram
+
+participant "p:Participant" as p
+participant "o:Object" as o
+
+@enduml

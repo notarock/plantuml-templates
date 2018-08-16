@@ -1,0 +1,20 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam class {
+         BorderColor Navy
+         ArrowColor Navy
+         BackgroundColor WhiteSmoke
+}
+
+
+title Class diagram
+
+class class {
+}
+
+class "class 2" {
+}
+
+class -right--> "class 2" : > use
+
+@enduml
