@@ -17,4 +17,28 @@ title Sequence diagram
 participant "p:Participant" as p
 participant "o:Object" as o
 
+activate p
+
+p -> o : Action
+activate o
+p <-- o : Retour
+deactivate o
+
+|||
+
+alt "Altenatif"
+
+    activate p
+
+    p -> o : Action
+    activate o
+    p <-- o : Retour
+    deactivate o
+
+    deactivate p
+
+end
+
+deactivate p
+
 @enduml
