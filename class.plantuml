@@ -14,7 +14,10 @@ class class {
 
 class "class 2" {
 }
-
+^
 class -right--> "class 2" : > use
+
+
+hide empty members
 
 @enduml
