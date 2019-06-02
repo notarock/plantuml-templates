@@ -1,0 +1,55 @@
+@startuml
+
+rectangle "Vu de l'exterieur" <<Cluster>> {
+  
+
+cloud Internet
+node worker1
+node worker2
+node worker3
+node worker4
+
+Internet ~~ worker2 : Trafique externe
+
+worker2 --> worker1
+worker2 --> worker2
+worker2 --> worker3
+worker2 --> worker4
+
+}
+
+rectangle "Exemple ou concept" <<Concept>> {
+	rectangle "Example 1" <<Exemple>> as ex1
+	rectangle "Important de vérifier..."
+}
+
+cloud AWS {
+  node bucket1
+}
+
+cloud cluster{
+  node reverseproxy
+
+  folder namespace1 {
+    node api1
+    queue SendMonthlyMail
+    database mongo1
+
+    api1 --> mongo1 : uses
+    api1 --> bucket1 : store files in
+  }
+
+  folder namespace2 {
+    frame api2
+    database mysql2
+
+    api2 --> mysql2 : uses
+    api2 --> bucket1 : store files in
+  }
+
+  reverseproxy -- api1
+  reverseproxy -- api2
+}
+
+
+@enduml
