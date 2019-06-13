@@ -17,6 +17,10 @@ Ces templates apportent quelques changements utiles au style de base de plantuml
 
 ![](screenshot/sequence.png)
 
+### Diagramme de déploiement
+
+![](screenshot/deployment.png)
+
 ## Roadmap
 
 - Ajouter un template basique pour chaques types de diagramme (MDD, etc)
